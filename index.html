@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Lopes | Nutricionista</title>
+  
+  <!-- Fonte moderna estilo Instagram -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Cores oficiais do seu feed do Instagram */
+    :root {
+      --off-white:   #F9F9FA;   /* Fundo limpo e leve */
+      --teal-deep:   #0F3A4B;   /* Azul-petróleo escuro dos seus títulos */
+      --teal-mid:    #1B4E63;   /* Tom para o clique/hover */
+      --nude-earth:  #B59A83;   /* Marrom/nude das bordas dos seus posts */
+      --nude-light:  #F2ECE6;   /* Fundo suave para botões secundários */
+      --text-dark:   #0F3A4B;   /* Texto principal */
+      --text-muted:  #6E7E85;   /* Subtextos */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--off-white);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 580px;
+      text-align: center;
+    }
+
+    /* ESTILO INFALÍVEL PARA DEIXAR A FOTO REDONDA */
+    .avatar-container {
+      width: 120px;
+      max-width: 120px;
+      aspect-ratio: 1 / 1; /* Garante proporção perfeitamente quadrada */
+      margin: 0 auto 18px auto;
+      border-radius: 50%; /* Transforma o quadrado em círculo perfeito */
+      padding: 4px;
+      background: var(--nude-earth); /* Borda elegante com a sua cor nude */
+      box-shadow: 0 4px 12px rgba(15, 58, 75, 0.1);
+      overflow: hidden;
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Recorta a imagem sem distorcer ou esticar seu rosto */
+      object-position: center top; /* Garante foco excelente no enquadramento do rosto */
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      color: var(--teal-deep);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      background-color: var(--teal-deep);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      padding: 0 15px;
+    }
+
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .btn:active {
+      transform: scale(0.99);
+    }
+
+    /* Botão Principal - Azul Petróleo */
+    .btn-primary {
+      background-color: var(--teal-deep);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--teal-mid);
+    }
+
+    /* Botão Secundário - Nude Suave */
+    .btn-soft {
+      background-color: var(--nude-light);
+      color: var(--teal-deep);
+    }
+
+    .btn-soft:hover {
+      background-color: rgba(181, 154, 131, 0.25);
+    }
+
+    /* Botões de Contorno - Linha Nude */
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: var(--teal-deep);
+      border: 2px solid var(--nude-earth);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--nude-light);
+    }
+
+    .btn-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .btn-primary .btn-sub {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- FOTO DE PERFIL CONFIGURADA COM NOME SIMPLIFICADO -->
+    <div class="avatar-container">
+      <div class="avatar-inner">
+        <!-- O código agora busca o arquivo simplificado 'foto.JPG' ou 'foto.jpg' -->
+        <img src="foto.JPG" onerror="this.src='foto.jpg'" alt="Ana Lopes">
+      </div>
+    </div>
+
+    <!-- SEUS TEXTOS OFICIAIS -->
+    <h1 class="name">Ana Lopes</h1>
+    <span class="badge">Nutricionista clínica | Saúde da mulher</span>
+    
+    <p class="tagline">
+      Emagrecimento real, sem julgamentos ou perfeccionismo.<br>
+      <strong>Atendimento humanizado para transformar sua relação com o corpo.</strong>
+    </p>
+
+    <!-- LINKS TOTALMENTE CONFIGURADOS -->
+    <div class="links-list">
+      
+      <!-- 1. WhatsApp Atualizado (Final 0020) com mensagem pronta -->
+      <a href="https://wa.me/5511971380020?text=Olá,%20Nutri!%20Gostaria%20de%20saber%20mais%20informações%20sobre%20a%20consulta%20nutricional." class="btn btn-primary" target="_blank">
+        Marque a sua consulta
+        <span class="btn-sub">Agendamento online • rápido e fácil</span>
+      </a>
+
+      <!-- 2. Site Oficial Conectado -->
+      <a href="https://nutrianalopes.com" class="btn btn-outline" target="_blank">
+        Acesse meu Site Oficial
+        <span class="btn-sub">nutrianalopes.com</span>
+      </a>
+
+      <!-- 3. E-book do Google Drive Conectado -->
+      <a href="https://drive.google.com/file/d/1ie-SPI-0nLizVxUPfhrl-O0cHZWAJA-L/view?usp=sharing" class="btn btn-soft" target="_blank">
+        Baixe meu E-book
+        <span class="btn-sub">O Método da Rotina Saudável</span>
+      </a>
+
+      <!-- 4. Formulário pré-consulta Conectado -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScKekW1CpLSRDFqKEZvV_Hq-RRs2AHde9qhPcqZoi8hJDQLLA/viewform?usp=header" class="btn btn-outline" target="_blank">
+        Formulário pré-consulta
+        <span class="btn-sub">Protocolo de Evolução Nutricional</span>
+      </a>
+
+      <!-- 5. Seu e-mail comercial -->
+      <a href="mailto:atendimento@nutrianalopes.com" class="btn btn-soft">
+        E-mail de Contato
+        <span class="btn-sub">atendimento@nutrianalopes.com</span>
+      </a>
+
+    </div>
+
+    <!-- RODAPÉ PROFISSIONAL -->
+    <footer class="footer">
+      <p>Ana Lopes — Nutricionista | CRN-3 72812</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
